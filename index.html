@@ -6,35 +6,91 @@
     <title>CV Interactivo</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>Cristian Francisco Ñustes Díaz</h1>
-        <p>Ingeniero de Sistemas | Análisis de Datos | SQL</p>
-        <button id="theme-toggle">🌙</button>
+    <header class="header">
+        <div class="container">
+            <img src="profile.jpg" alt="Foto de perfil" class="profile-pic">
+            <h1>Cristian Francisco Ñustes Díaz</h1>
+            <p>Ingeniero de Sistemas | Análisis de Datos | SQL</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/cristian-francisco-%C3%B1ustes-diaz-3a781b229/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Cristinustes" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcristiannustes" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <button id="dark-mode-toggle" class="btn">Modo Oscuro 🌘 </button>
+        </div>
     </header>
     
-    <section id="info">
-        <h2>Información Personal</h2>
-        <p>Email: contacto@ejemplo.com</p>
-        <p>LinkedIn: <a href="#">Perfil</a></p>
-        <p>GitHub: <a href="#">Repositorio</a></p>
-    </section>
+    <main>
+        <section class="card informacion-personal">
+            <h2>Información Personal</h2>
+            <p><strong>Email:</strong> sebascristi@hotmail.com</p>
+            <p><strong>Teléfono:</strong> +57 315 676 7637</p>
+            <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
+        </section>
+
+        <section class="card habilidades">
+            <h2>Habilidades</h2>
+            <div class="skill">
+                <span>SQL</span>
+                <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+            </div>
+            <div class="skill">
+                <span>Power BI</span>
+                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+            </div>
+        </section>
+        
+        <section class="card educacion">
+            <h2>Educación</h2>
+            <ul>
+                <li>Ingeniería de Sistemas - Universidad Nacional de Colombia</li>
+                <li>Curso Avanzado en Análisis de Datos - Platzi</li>
+                <li>Certificación en SQL - Oracle Academy</li>
+            </ul>
+        </section>
+        
+        <section class="card experiencia">
+            <h2>Experiencia Laboral</h2>
+            <ul>
+                <li><strong>Analista de Datos</strong> - Empresa XYZ (2023 - Presente)</li>
+                <li><strong>Desarrollador Backend</strong> - Startup ABC (2022 - 2023)</li>
+                <li><strong>Intern en TI</strong> - Compañía 123 (2021 - 2022)</li>
+            </ul>
+        </section>
+        
+        <section class="card proyectos">
+            <h2>Proyectos</h2>
+            <ul>
+                <li>Automatización de Reportes con Python y Power BI</li>
+                <li>Sistema de Gestión de Afiliaciones en SQL y Node.js</li>
+                <li>Dashboard de Análisis Financiero con React y D3.js</li>
+            </ul>
+        </section>
+        
+        <section class="card contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                
+                <button type="submit" class="btn">Enviar</button>
+            </form>
+        </section>
+    </main>
     
-    <section id="experiencia">
-        <h2>Experiencia Laboral</h2>
-        <p>Coordinación de Afiliaciones - Análisis de datos</p>
-    </section>
-    
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <div class="skill">HTML <div class="progress" data-value="90"></div></div>
-        <div class="skill">CSS <div class="progress" data-value="85"></div></div>
-        <div class="skill">JavaScript <div class="progress" data-value="75"></div></div>
-    </section>
-    
-    <footer>
-        <p>© 2025 Cristian Ñustes</p>
-    </footer>
+    <button id="back-to-top" class="btn">⬆️</button>
 </body>
 </html>
